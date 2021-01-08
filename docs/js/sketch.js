@@ -63,6 +63,30 @@ canvas.addEventListener("mousemove", function(evt) {
   }
 }, false);
 
+canvas.addEventListener('touchstart', function(evt) {
+  dibujar = true;
+  //ctx.clearRect(0, 0, cw, ch);
+  puntos.length = 0;
+  ctx.beginPath();
+  canvaDentro();
+  canvaDEntroDentro();
+  
+
+}, false);
+
+canvas.addEventListener('touchend', function(evt) {
+  redibujarTrazados();
+}, false);
+
+canvas.addEventListener("touchmove", function(evt) {
+  if (dibujar) {
+    var m = oMousePos(canvas, evt);
+    puntos.push(m);
+    ctx.lineTo(m.x, m.y);
+    ctx.stroke();
+  }
+}, false);
+
 
 function reducirArray(n,elArray) {
   var nuevoArray = [];
@@ -113,3 +137,108 @@ function oMousePos(canvas, evt) {
     y: Math.round(evt.clientY - ClientRect.top)
   }
 }
+// }
+// //======================================================================
+// // VARIABLES
+// //======================================================================
+// let limpiar = document.getElementById("limpiar");
+// let miCanvas = document.querySelector('#canvas');
+// let lineas = [];
+// let correccionX = 0;
+// let correccionY = 0;
+// let pintarLinea = false;
+// // Marca el nuevo punto
+// let nuevaPosicionX = 0;
+// let nuevaPosicionY = 0;
+
+// let posicion = miCanvas.getBoundingClientRect()
+// correccionX = posicion.x;
+// correccionY = posicion.y;
+
+// miCanvas.width = 500;
+// miCanvas.height = 500;
+
+// //======================================================================
+// // FUNCIONES
+// //======================================================================
+
+// limpiar.addEventListener('click', function(evt) {
+//   pintarLinea = false;
+//   ctx.guardarLinea();
+//   let nuevaPosicionX = 0;
+//   let nuevaPosicionY = 0;
+// }, false);
+// /**
+//  * Funcion que empieza a dibujar la linea
+//  */
+// function empezarDibujo() {
+//     pintarLinea = true;
+//     lineas.push([]);
+// };
+
+// /**
+//  * Funcion que guarda la posicion de la nueva línea
+//  */
+// function guardarLinea() {
+//     lineas[lineas.length - 1].push({
+//         x: nuevaPosicionX,
+//         y: nuevaPosicionY
+//     });
+// }
+
+// /**
+//  * Funcion dibuja la linea
+//  */
+// function dibujarLinea(event) {
+//     event.preventDefault();
+//     if (pintarLinea) {
+//         let ctx = miCanvas.getContext('2d')
+//         // Estilos de linea
+//         ctx.lineJoin = ctx.lineCap = 'round';
+//         ctx.lineWidth = 10;
+//         // Color de la linea
+//         ctx.strokeStyle = '#fff';
+//         // Marca el nuevo punto
+//         if (event.changedTouches == undefined) {
+//             // Versión ratón
+//             nuevaPosicionX = event.layerX;
+//             nuevaPosicionY = event.layerY;
+//         } else {
+//             // Versión touch, pantalla tactil
+//             nuevaPosicionX = event.changedTouches[0].pageX - correccionX;
+//             nuevaPosicionY = event.changedTouches[0].pageY - correccionY;
+//         }
+//         // Guarda la linea
+//         guardarLinea();
+//         // Redibuja todas las lineas guardadas
+//         ctx.beginPath();
+//         lineas.forEach(function (segmento) {
+//             ctx.moveTo(segmento[0].x, segmento[0].y);
+//             segmento.forEach(function (punto, index) {
+//                 ctx.lineTo(punto.x, punto.y);
+//             });
+//         });
+//         ctx.stroke();
+//     }
+// }
+
+// /**
+//  * Funcion que deja de dibujar la linea
+//  */
+// function pararDibujar () {
+//     pintarLinea = false;
+//     guardarLinea();
+// }
+
+// //======================================================================
+// // EVENTOS
+// //======================================================================
+
+// // Eventos raton
+// miCanvas.addEventListener('mousedown', empezarDibujo, false);
+// miCanvas.addEventListener('mousemove', dibujarLinea, false);
+// miCanvas.addEventListener('mouseup', pararDibujar, false);
+
+// // Eventos pantallas táctiles
+// miCanvas.addEventListener('touchstart', empezarDibujo, false);
+// miCanvas.addEventListener('touchmove', dibujarLinea, false)

@@ -32,8 +32,6 @@ html {
     background-image: url(./images/earth-1151659_1920.jpg);
     background-size: cover;
     background-repeat: no-repeat; 
-    background-position: ; 
-    animation: BgRotate 10s ease infinite; 
 }
 
 .imgHero {
