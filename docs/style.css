@@ -22,6 +22,8 @@ html {
 
 
 .hero {
+  position: relative;
+  overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,20 +31,25 @@ html {
     height: 200px;
     background-image: url(./images/earth-1151659_1920.jpg);
     background-size: cover;
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat; 
+    background-position: ; 
+    animation: BgRotate 10s ease infinite; 
 }
+
 .imgHero {
+  display: flex;
   position: absolute;
   z-index: 0;
   width: 200%;
   height: auto;
   border-radius: 50%;
   -webkit-animation: 100s rotate linear infinite;
-  animation: 100s rotate linear infinite;
+  animation: 200s rotate linear infinite;
   -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%; 
 }
 .title-hero {
+  position: relative;
     width: 45%;
     max-width: 144px;
     display: flex;
