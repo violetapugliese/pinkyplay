@@ -418,3 +418,14 @@ html {
     height: 25px;
     border-radius: 28px;
   }
+  canvas {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin: calc(50vh - 150px) auto 0;
+    background: #050529;
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px 3px #ccc;
+    cursor:pointer;
+    z-index: 2;
+  }

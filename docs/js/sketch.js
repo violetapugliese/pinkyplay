@@ -63,7 +63,7 @@ canvas.addEventListener("mousemove", function(evt) {
   }
 }, false);
 
-canvas.addEventListener('touchstart', function(evt) {
+canvas.addEventListener("touchstart", function(evt) {
   dibujar = true;
   //ctx.clearRect(0, 0, cw, ch);
   puntos.length = 0;
@@ -74,7 +74,7 @@ canvas.addEventListener('touchstart', function(evt) {
 
 }, false);
 
-canvas.addEventListener('touchend', function(evt) {
+canvas.addEventListener("touchend", function(evt) {
   redibujarTrazados();
 }, false);
 
