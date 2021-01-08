@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    <title>Points</title>
+</head>
+<style>
+  .caja-points {
+    display: flex;
+      justify-content: center;
+      align-self: center;
+      width: 100%;
+      height: 100%;
+      border: solid 2px red;
+      position: relative;
+      z-index: 100;
+  }
+  .point {
+        position: absolute;
+        width: 0.8em;
+        height: 0.8em;
+        border-radius: 50%;
+        background-color: #ffffff;
+    }
+    .point:hover {
+        background-color: blueviolet;
+    }
+    .point1 {
+        top: 88%;
+        left: 28%;
+    }
+
+    .point2 {
+        top: 52%;
+        left: 28%;
+    }
+    .point3 {
+        top: 31%;
+        left: 28%;
+    }
+    .point4 {
+        top: 29%;
+        left: 10%;
+    }
+    .point5 {
+        top: 23%;
+        left: 17%;
+    }
+    .point6 {
+        top: 18%;
+        left: 20%;
+    }
+    .point7 {
+        top: 12%;
+        left: 24%;
+    }
+    .point8 {
+        top: 9%;
+        left: 30%;
+    }
+    .point9 {
+        top: 9%;
+        left: 38%;
+    }
+    .point10 {
+        top: 13%;
+        left: 47%;
+    }
+    .point11 {
+        top: 16%;
+        left: 55%;
+    }
+    .point12 {
+        top: 19%;
+        left: 65%;
+    }
+    .point13 {
+        top: 27%;
+        left: 50%;
+    }
+    .point14 {
+        top: 49%;
+        left: 67%;
+    }
+    .point15 {
+        top: 76%;
+        left: 89%;
+    }
+    p {
+        margin-left: 0.5em;
+        margin-top: 0.7em;
+    }
+    canvas {
+        position: relative;
+  display: block;
+  margin: 0 auto;
+  margin: calc(50vh - 150px) auto 0;
+  background: #050529;
+  border-radius: 3px;
+  box-shadow: 0px 0px 15px 3px #ccc;
+  cursor:pointer;
+  z-index: 2;
+}
+p{
+  text-align:center;
+  cursor:pointer;
+}
+</style>
+ <body>
+    <section class=" game-points">
+        <h2 class="title-game title-points">Alien Points</h2>
+        <!-- <div class="block-game block-points" id="block-gamePoints"> -->
+          <!-- <button class="btn-start" id="btnEmpezarPoints" onclick="empezarJuegoPoints()">Level locked</button> -->
+        </div>
+        <div class="points-container">
+              <div class="point point1" id="point1"><p>1</p></div>
+              <div class="point point2" id="point2"><p>2</p></div>
+              <div class="point point3" id="point3"><p>3</p></div>
+              <div class="point point4" id="point4"><p>4</p></div>
+              <div class="point point5" id="point5"><p>5</p></div>
+              <div class="point point6" id="point6"><p>6</p></div>
+              <div class="point point7" id="point7"><p>7</p></div>
+              <div class="point point8" id="point8"><p>8</p></div>
+              <div class="point point9" id="point9"><p>9</p></div>
+              <div class="point point10" id="point10"><p>10</p></div>
+              <div class="point point11" id="point11"><p>11</p></div>
+              <div class="point point12" id="point12"><p>12</p></div>
+              <div class="point point13" id="point13"><p>13</p></div>
+              <div class="point point14" id="point14"><p>14</p></div>
+              <div class="point point15" id="point15"><p>15</p></div>
+              <!-- <img class="img-points" src="./images/nave-points-2.png" alt="juego puntos"> -->
+        </div>
+        <canvas id="canvas">Su navegador no soporta canvas :( </canvas>
+        <p id="limpiar">limpiar canvas</p>
+      </section>
+    <script src="./js/p5.js"></script>
+    <script src="./js/sketch.js"></script>
+      <script>
+        let point1 = document.getElementById("point1");
+        point1.addEventListener('mouseover', function (){activarPunto(1)});
+
+        class JuegoPoints {
+            constructor () {
+                
+            }
+        }
+        function activarPunto(number){
+            let point = (number +1);
+            console.log(point);
+            console.log(`point${point}`);
+            if (point < 16) {
+                document.getElementById(`point${point}`).addEventListener('mouseover', function (){activarPunto (point)});
+            }
+        }
+     
+        function empiezaJuegoPoints() {
+            window.juego = new JuegoPoints();
+        }
+    </script>
+</body>
+</html>

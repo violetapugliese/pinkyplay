@@ -7,6 +7,10 @@ Rosa flúo #fd36b1
     margin: 0;
     padding: 0;
 }
+@keyframes rotate {from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}}
+@-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}}
 
 html {
     font-size: 62.5%;
@@ -25,7 +29,18 @@ html {
     height: 200px;
     background-image: url(./images/earth-1151659_1920.jpg);
     background-size: cover;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;   
+}
+.imgHero {
+  position: absolute;
+  z-index: 0;
+  width: 200%;
+  height: auto;
+  border-radius: 50%;
+  -webkit-animation: 100s rotate linear infinite;
+  animation: 100s rotate linear infinite;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%; 
 }
 .title-hero {
     width: 45%;
@@ -34,6 +49,7 @@ html {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    z-index: 2;
 }
 .title-top {
     z-index: 1;
@@ -41,7 +57,8 @@ html {
     font-size: 5.0rem;
     line-height: 40px;
     text-shadow: 
-    -2px -2px 0px #fd36b1, 3px -2px 0px #fd36b1, 2px 8px 0px #fd36b1, -4px 8px 0px #fd36b1
+    -2px -2px 0px #fd36b1, 3px -2px 0px #fd36b1, 2px 8px 0px #fd36b1, -4px 8px 0px #fd36b1;
+    z-index: 2;
 }
 
 .title-bottom {
@@ -50,13 +67,15 @@ html {
     font-family: 'Fugaz One', cursive;  
     font-size: 6.0rem;
     text-shadow: 
-    -2px -2px 0px #fd36b1, 3px -2px 0px #fd36b1, 2px 8px 0px #fd36b1, -4px 8px 0px #fd36b1
+    -2px -2px 0px #fd36b1, 3px -2px 0px #fd36b1, 2px 8px 0px #fd36b1, -4px 8px 0px #fd36b1;
+    z-index: 2;
 }
 .relleno-hero {
     margin-top: -113px;
     width: 109px;
     height: 68px;
     background-color: #fd36b1;
+    z-index: 1;
 }
 
 /* Piedra papel o tijera */
@@ -68,6 +87,7 @@ html {
     align-items: center;
     padding: 30px 0px;
     background-color: #fd36b1;
+    z-index: 4;
 }
 .title-game {
     z-index: 2;
@@ -226,6 +246,8 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 30px 0px;
+    background-color: #fd36b1;
+    z-index: 4;
 }
 .block-simon {
   position: absolute;
@@ -235,7 +257,7 @@ html {
   height: 70%;
   justify-content: center;
   border-radius: 28px;
-  z-index: 5;
+  z-index: 10;
   background-color: #050529a6;
  
 }
@@ -331,9 +353,10 @@ html {
       align-items: center;
       padding: 30px 0;
       background-color: #050529;
-      background-image: url(./images/earth-1151659_1920.jpg);
+      /* background-image: url(./images/earth-1151659_1920.jpg); */
       background-size: cover;
       background-repeat: no-repeat;
+      z-index: 4;
     }
     .block-game  {
       position: absolute;
@@ -344,7 +367,7 @@ html {
       justify-content: center;
       background-color: #050529;
       border-radius: 28px;
-      z-index: 5;
+      z-index: 10;
     }
     
     .btn-start {
@@ -357,7 +380,7 @@ html {
       border-radius: 28px;
      
     }
-    .game-points::before{
+    /* .game-points::before{
       content: "";
       position: absolute;
       top: 0px;
@@ -366,20 +389,22 @@ html {
       left: 0px;
       background-color: rgb(5, 5, 41, 0.8);
       border-radius: 20px;
-    }
+    } */
     .points-container {
+      position: relative;
       display: flex;
       justify-content: center;
       align-self: center;
       width: 90%;
-      max-width: 400px;
+      max-width: 320px;
       height: 90%;
       min-height: 370px;
       margin: 5% auto 20px;
+      z-index: 1;
   }
 
   .img-points {
-    width: 90%;
+    width: 100%;
     height: auto;
     z-index: 2;
   }
