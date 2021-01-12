@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
-    <script src="./js/ppot.js"></script>
-    <script src="./js/simon.js"></script>
     <title>PinkyPLay</title>
 </head>
 <body>
@@ -75,18 +73,36 @@
     </div>
   </section>
   <section class=" game-points">
-    <h2 class="title-game title-points">Alien Points</h2>
-    <!-- <div class="block-game block-points" id="block-gamePoints">
-      <button class="btn-start" id="btnEmpezarPoints" onclick="empezarJuegoPoints()">Level locked</button>
-    </div> -->
-    <div class="points-container">
-      <div class="opacity-points"></div>
-      <img class="img-points" src="./images/nave-points-2.png" alt="juego puntos">
-    </div>
-    <canvas id="canvas">Su navegador no soporta canvas :( </canvas>
-        <p id="limpiar">limpiar canvas</p>
+    <section class=" game-points">
+      <h2 class="title-game title-points">Alien Points</h2>
+      <!-- <div class="block-game block-points" id="block-gamePoints"> -->
+        <!-- <button class="btn-start" id="btnEmpezarPoints" onclick="empezarJuegoPoints()">Level locked</button> -->
+      </div>
+      <div class="points-container">
+            <div class="point point1" id="point1"><p>1</p></div>
+            <div class="point point2" id="point2"><p>2</p></div>
+            <div class="point point3" id="point3"><p>3</p></div>
+            <div class="point point4" id="point4"><p>4</p></div>
+            <div class="point point5" id="point5"><p>5</p></div>
+            <div class="point point6" id="point6"><p>6</p></div>
+            <div class="point point7" id="point7"><p>7</p></div>
+            <div class="point point8" id="point8"><p>8</p></div>
+            <div class="point point9" id="point9"><p>9</p></div>
+            <div class="point point10" id="point10"><p>10</p></div>
+            <div class="point point11" id="point11"><p>11</p></div>
+            <div class="point point12" id="point12"><p>12</p></div>
+            <div class="point point13" id="point13"><p>13</p></div>
+            <div class="point point14" id="point14"><p>14</p></div>
+            <div class="point point15" id="point15"><p>15</p></div>
+            <!-- <img class="img-points" src="./images/nave-points-2.png" alt="juego puntos"> -->
+            <canvas id="canvas">Su navegador no soporta canvas :( </canvas>
+      </div>
+      <p class="clear" id="clear">limpiar canvas</p>
+      </section>
   </section>
   <script src="./js/p5.js"></script>
-  <script src="./js/sketch.js"></script>
+  <script src="./js/points.js"></script>
+  <script src="./js/ppot.js"></script>
+    <script src="./js/simon.js"></script>
 </body>
 </html>
