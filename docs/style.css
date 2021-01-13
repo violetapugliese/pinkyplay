@@ -16,7 +16,7 @@ html {
     font-size: 62.5%;
     font-family: Arial, Helvetica, sans-serif;
     background-size: 100vh;
-    background: #fd36b1;
+    background: #050529;
     color: white;
 }
 
@@ -28,7 +28,7 @@ html {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 200px;
+    height: 20rem;
     background-image: url(./images/earth-1151659_1920.jpg);
     background-size: cover;
     background-repeat: no-repeat; 
@@ -68,7 +68,7 @@ html {
 
 .title-bottom {
     z-index: 1;
-    margin-top: -19px;
+    margin-top: -1.9rem;
     font-family: 'Fugaz One', cursive;  
     font-size: 6.0rem;
     text-shadow: 
@@ -76,11 +76,70 @@ html {
     z-index: 2;
 }
 .relleno-hero {
-    margin-top: -113px;
-    width: 109px;
-    height: 68px;
+    margin-top: -11rem;
+    width: 11rem;
+    height: 6.8rem;
     background-color: #fd36b1;
     z-index: 1;
+}
+.botonEmpezar{
+  width: 22vh;
+  height: 6vh;
+  border: solid 2px #ffffff;
+  color: #ffffff;
+  background-color: #05052927;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 2rem;
+  border-radius: 28px;
+   z-index: 6;
+}
+/* .game-presentation{
+  position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+    background-image: url(./images/earth-1151659_1920.jpg);
+    background-size: cover;
+    z-index: 4;
+} */
+.flechaContainer {
+  position: relative;
+  display: flex;
+  width: 31rem;
+  height: 4rem;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 250px;
+}
+.flechaBack{
+  width: 3.3rem;
+  height: auto;
+  transform: rotate(90deg);
+}
+.flechaNext{
+  width: 3.3rem;
+  height: auto;
+  transform: rotate(270deg);
+  visibility: hidden;
+}
+
+.descriptionContainer{
+  width: 40%;
+  min-width: 310px;
+  z-index: 6;
+}
+.description{
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #050529;
+  text-align: center;
+}
+.descriptionIndex{
+  color: #ffffff;
 }
 
 /* Piedra papel o tijera */
@@ -96,10 +155,10 @@ html {
 }
 .title-game {
     z-index: 2;
-    width: 200px;
+    width: 180px;
+    align-self: center;
     display: inline-block;
     text-align: center;
-    margin-bottom: 20px;
     font-family: 'Fugaz One', cursive;  
     font-size: 2.0rem;
     line-height: 23px;
@@ -418,6 +477,7 @@ html {
     width: 100px;
     height: 25px;
     border-radius: 28px;
+    z-index: 6;
   }
   canvas {
     position: absolute;
@@ -522,7 +582,7 @@ html {
         top: 76%;
         left: 89%;
     }
-    p {
+    .pNum {
         margin-left: 0.5em;
         margin-top: 0.7em;
     }

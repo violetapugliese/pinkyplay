@@ -123,8 +123,7 @@
           
         }
         desbloquearNivelBtn() {
-          document.getElementById('btnEmpezarPoints').innerHTML = "Jugar";
-          document.getElementById('btnEmpezarPoints').addEventListener('click', this.desbloquearNivel);
+          document.getElementById('flechaNextSimon').style.visibility = 'visible';
 
         }
         desbloquearNivel() {

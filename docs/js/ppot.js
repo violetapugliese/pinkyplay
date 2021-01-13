@@ -32,6 +32,7 @@ class Juego {
         this.partida(userEligio, cpuEligio);
         this.siguientePartida(choice, cpuChoice);
         
+        
     }
 
     convertirNumeroAOpcion(numero) {
@@ -110,8 +111,7 @@ class Juego {
         } 
     }
     desbloquearNivelBtn() {
-        document.getElementById('btnEmpezarSimon').innerHTML = "Jugar";
-        document.getElementById('btnEmpezarSimon').addEventListener('click', this.desbloquearNivel);
+       document.getElementById('flechaNext').style.visibility = 'visible';
 
       }
       desbloquearNivel() {

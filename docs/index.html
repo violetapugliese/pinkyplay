@@ -8,101 +8,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
     <title>PinkyPLay</title>
 </head>
+<style>
+  .hero{
+    margin-top: 30vh;
+    padding: 5rem;
+    height: auto;
+  }
+</style>
 <body>
   <header>
   </header>
-  <section class="hero">
-    <img src="./images/earth-1151659_1920.jpg" alt="space" class="imgHero">
+  
+    <section class="hero">
+      <img src="./images/earth-1151659_1920.jpg" alt="space" class="imgHero">
     <div class="title-hero">
       <p class="title-top">Pinky</p>
       <p class="title-bottom">Pläy</p>
       <div class="relleno-hero"></div>
+      <div class="botonIndex">
+        <a href="./pages/ppot.html" >
+          <button class="botonEmpezar">Empezar</button>
+        </a>
+      </div>
     </div>
+    <!-- <h2 class="title-game">Dónde está<br>Pinky?</h2> 
+    <div class="descriptionContainer">
+      <p class="description descriptionIndex">No podemos encontrar a Pinky por ningún lado. Ha desaparecido de la faz de la tierra. Seguro está otra vez en problemas! Nos ayudarías a encontrarlo? <br> <br>Completá los tres juegos y descubrí dónde está nuestro pequeño amigo... </p> -->
+  
+    
   </section>
-  <section class="game-ppot">
-    <h2 class="title-game">Piedra Papel<br>o Tijera</h2>
-    <div class="user-vs-cpu">
-      <button class="btnSeguimos btn" id="btnSeguimos">Seguimos?</button>
-        <div class="options" id="options">
-          <div class="option rock" id="rock" onclick="empiezaJuego(piedra)" ></div>
-          <div class="option paper" id="paper" onclick="empiezaJuego(papel)"></div>
-          <div class="option scissors" id="scissors" onclick="empiezaJuego(tijera)"></div>
-          <p class="text ask">?</p>
-        </div>
-        <div class="user-option" id="userOption">
-          <div class="user-option-img" id="userOptionsImg">
-              <img class="img-piedra" id="piedraImg" src="./images/piedra.png" alt="piedra">
-              <img class="img-papel" id="papelImg" src="./images/papel.png" alt="papel">
-              <img class="img-tijera" id="tijeraImg" src="./images/tijera.png" alt="tijera">
-          </div>
-          <p class="text userName" id="userName">UserName</p>
-          </div>
-        <p class="text vs">Vs.</p>
-        <div class="alien-option" id="alienOption">
-          <div class="alien-option-img" id="optionAlienImg" onclick="hola()" >
-              <img class="img-piedra" id="piedraAlienImg" src="./images/piedra.png" alt="piedra">
-              <img class="img-papel" id="papelAlienImg" src="./images/papel.png" alt="papel">
-              <img class="img-tijera" id="tijeraAlienImg" src="./images/tijera.png" alt="tijera">
-          </div>  
-          <p class="text alien" id="alienName">Alien</p>
-        </div>
-      </div>
-      <p class="text veredict-ppot" id="veredictPpot"></p>
-      <div class="score-ppot" id="scorePpot">
-        <p class="text score-user-number" id="scoreUserNumber">0</p>
-        <p class="text">-</p>
-        <p class="text score-user-number" id="scoreCpuNumber">0</p>
-      </div>
-      <button class="reset btn" id="resetPpot" onclick="reset()">Reset</button>
-  </section>
-  <section class="game-simon">
-    <h2 class="title-game">Alien Dice</h2>
-    <div class="block-simon" id="block-gameSimon">
-      <button class="btn-start" id="btnEmpezarSimon">Level locked</button>
-    </div>
-    <div class="simon-container">
-     <button class="btnStart btn" onclick="empiezaJuegoSimon()">Empezar</button>
-      <div class="gameboard">
-        <div id="celeste" class="color celeste left" data-color="celeste"></div>
-        <div id="violeta" class="color violeta right" data-color="violeta"></div>
-        <div id="naranja" class="color naranja left" data-color="naranja"></div>
-        <div id="verde" class="color verde right" data-color="verde"></div>
-      </div>
-      <p class="text levelSimon" id="levelSimon">Nivel: 0</p>
-      <button class="reset btn" id="resetSimon" onclick="resetSimon()">Reset</button>
-    </div>
-  </section>
-  <section class=" game-points">
-    <section class=" game-points">
-      <h2 class="title-game title-points">Alien Points</h2>
-      <!-- <div class="block-game block-points" id="block-gamePoints"> -->
-        <!-- <button class="btn-start" id="btnEmpezarPoints" onclick="empezarJuegoPoints()">Level locked</button> -->
-      </div>
-      <div class="points-container">
-            <div class="point point1" id="point1"><p>1</p></div>
-            <div class="point point2" id="point2"><p>2</p></div>
-            <div class="point point3" id="point3"><p>3</p></div>
-            <div class="point point4" id="point4"><p>4</p></div>
-            <div class="point point5" id="point5"><p>5</p></div>
-            <div class="point point6" id="point6"><p>6</p></div>
-            <div class="point point7" id="point7"><p>7</p></div>
-            <div class="point point8" id="point8"><p>8</p></div>
-            <div class="point point9" id="point9"><p>9</p></div>
-            <div class="point point10" id="point10"><p>10</p></div>
-            <div class="point point11" id="point11"><p>11</p></div>
-            <div class="point point12" id="point12"><p>12</p></div>
-            <div class="point point13" id="point13"><p>13</p></div>
-            <div class="point point14" id="point14"><p>14</p></div>
-            <div class="point point15" id="point15"><p>15</p></div>
-            <!-- <img class="img-points" src="./images/nave-points-2.png" alt="juego puntos"> -->
-            <canvas id="canvas">Su navegador no soporta canvas :( </canvas>
-      </div>
-      <p class="clear" id="clear">limpiar canvas</p>
-      </section>
-  </section>
-  <script src="./js/p5.js"></script>
-  <script src="./js/points.js"></script>
-  <script src="./js/ppot.js"></script>
-    <script src="./js/simon.js"></script>
+  <!-- <section class="game-presentation">
+    
+  </section> -->
+</div>
 </body>
 </html>

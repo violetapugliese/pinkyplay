@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    <title>Points</title>
+</head>
+ <body>
+    <section class="hero">
+        <img src="../images/earth-1151659_1920.jpg" alt="space" class="imgHero">
+        <div class="title-hero">
+          <p class="title-top">Pinky</p>
+          <p class="title-bottom">Pläy</p>
+          <div class="relleno-hero"></div>
+        </div>
+      </section>
+    <section class=" game-points">
+        <div class="flechaContainer">
+            <a href="../index.html">
+              <img src="../images/flecha.png" class="flechaBack" alt="flecha">
+            </a>
+            <h2 class="title-game">Alien points</h2>
+            <a href="./points.html"> 
+              <img src="../images/flecha.png" class="flechaNext" id="flechaNextSimon" alt="flecha">
+            </a>
+        </div>
+        <div class="points-container">
+              <div class="point point1" id="point1"><p class="pNum" >1</p></div>
+              <div class="point point2" id="point2"><p class="pNum" >2</p></div>
+              <div class="point point3" id="point3"><p class="pNum" >3</p></div>
+              <div class="point point4" id="point4"><p class="pNum" >4</p></div>
+              <div class="point point5" id="point5"><p class="pNum" >5</p></div>
+              <div class="point point6" id="point6"><p class="pNum" >6</p></div>
+              <div class="point point7" id="point7"><p class="pNum" >7</p></div>
+              <div class="point point8" id="point8"><p class="pNum" >8</p></div>
+              <div class="point point9" id="point9"><p class="pNum" >9</p></div>
+              <div class="point point10" id="point10"><p class="pNum" >10</p></div>
+              <div class="point point11" id="point11"><p class="pNum" >11</p></div>
+              <div class="point point12" id="point12"><p class="pNum" >12</p></div>
+              <div class="point point13" id="point13"><p class="pNum" >13</p></div>
+              <div class="point point14" id="point14"><p class="pNum" >14</p></div>
+              <div class="point point15" id="point15"><p class="pNum" >15</p></div>
+              <!-- <img class="img-points" src="./images/nave-points-2.png" alt="juego puntos"> -->
+              <canvas id="canvas">Su navegador no soporta canvas :( </canvas>
+        </div>
+        <p class="clear" id="clear">limpiar canvas</p>
+        </section>
+    <script src="../js/p5.js"></script>
+    <script src="../js/points.js" ></script>
+    <!-- <script src="../js/sketch.js"></script> -->
+      <script>
+        let point1 = document.getElementById("point1");
+        let maxPoint = 16
+        point1.addEventListener('click', function (){activarPunto(1)});
+
+        class JuegoPoints {
+            constructor () {
+                this.activarPunto();
+                this.empiezaJuegoPoints();
+            }
+        }
+        function activarPunto(number){
+            let point = (number +1);
+            console.log(point);
+            console.log(`point${point}`);
+            if (point == maxPoint) {
+                    console.log("ganaste");
+                }
+           else if (point < maxPoint) {
+                document.getElementById(`point${point}`).addEventListener('click', function (){activarPunto (point)});
+            }
+        }
+     
+        function empiezaJuegoPoints() {
+            window.juego = new JuegoPoints();
+        }
+    </script>
+</body>
+</html>

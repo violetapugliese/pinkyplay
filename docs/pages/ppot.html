@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    <title>Piedra Papel O Tijera</title>
+</head>
+<body>
+  <header>
+  </header>
+  <section class="hero">
+    <img src="../images/earth-1151659_1920.jpg" alt="space" class="imgHero">
+    <div class="title-hero">
+      <p class="title-top">Pinky</p>
+      <p class="title-bottom">Pläy</p>
+      <div class="relleno-hero"></div>
+    </div>
+  </section>
+  <section class="game-ppot">
+    <div class="flechaContainer">
+      <a href="../index.html">
+        <img src="../images/flecha.png" class="flechaBack" alt="flecha">
+      </a>
+      <h2 class="title-game">Piedra Papel<br>o Tijera</h2>
+      <a href="./simon.html"> 
+        <img src="../images/flecha.png" class="flechaNext" id="flechaNext" alt="flecha">
+      </a>
+    </div>
+    <div class="descriptionContainer">
+      <p class="description">Vencé a Alien tres veces en su dificilísimo juego para pasara al siguiente nivel</p>
+    </div>
+    <div class="user-vs-cpu">
+      <button class="btnSeguimos btn" id="btnSeguimos">Seguimos?</button>
+        <div class="options" id="options">
+          <div class="option rock" id="rock" onclick="empiezaJuego(piedra)" ></div>
+          <div class="option paper" id="paper" onclick="empiezaJuego(papel)"></div>
+          <div class="option scissors" id="scissors" onclick="empiezaJuego(tijera)"></div>
+          <p class="text ask">?</p>
+        </div>
+        <div class="user-option" id="userOption">
+          <div class="user-option-img" id="userOptionsImg">
+              <img class="img-piedra" id="piedraImg" src="../images/piedra.png" alt="piedra">
+              <img class="img-papel" id="papelImg" src="../images/papel.png" alt="papel">
+              <img class="img-tijera" id="tijeraImg" src="../images/tijera.png" alt="tijera">
+          </div>
+          <p class="text userName" id="userName">UserName</p>
+          </div>
+        <p class="text vs">Vs.</p>
+        <div class="alien-option" id="alienOption">
+          <div class="alien-option-img" id="optionAlienImg" onclick="hola()" >
+              <img class="img-piedra" id="piedraAlienImg" src="../images/piedra.png" alt="piedra">
+              <img class="img-papel" id="papelAlienImg" src="../images/papel.png" alt="papel">
+              <img class="img-tijera" id="tijeraAlienImg" src="../images/tijera.png" alt="tijera">
+          </div>  
+          <p class="text alien" id="alienName">Alien</p>
+        </div>
+      </div>
+      <p class="text veredict-ppot" id="veredictPpot"></p>
+      <div class="score-ppot" id="scorePpot">
+        <p class="text score-user-number" id="scoreUserNumber">0</p>
+        <p class="text">-</p>
+        <p class="text score-user-number" id="scoreCpuNumber">0</p>
+      </div>
+      <button class="reset btn" id="resetPpot" onclick="reset()">Reset</button>
+  </section>
+  <script src="../js/ppot.js"></script>
+  </body>
+  </html>

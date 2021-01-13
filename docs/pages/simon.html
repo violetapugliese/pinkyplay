@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    <title>Simon</title>
+</head>
+<body>
+  <section class="hero">
+    <img src="../images/earth-1151659_1920.jpg" alt="space" class="imgHero">
+    <div class="title-hero">
+      <p class="title-top">Pinky</p>
+      <p class="title-bottom">Pläy</p>
+      <div class="relleno-hero"></div>
+    </div>
+  </section>
+    <section class="game-simon">
+      <div class="flechaContainer">
+        <a href="../index.html">
+          <img src="../images/flecha.png" class="flechaBack" alt="flecha">
+        </a>
+        <h2 class="title-game">Alien dice</h2>
+        <a href="./points.html"> 
+          <img src="../images/flecha.png" class="flechaNext" id="flechaNextSimon" alt="flecha">
+        </a>
+      </div>
+        <div class="simon-container">
+         <button class="btnStart btn" onclick="empiezaJuegoSimon()">Empezar</button>
+          <div class="gameboard">
+            <div id="celeste" class="color celeste left" data-color="celeste"></div>
+            <div id="violeta" class="color violeta right" data-color="violeta"></div>
+            <div id="naranja" class="color naranja left" data-color="naranja"></div>
+            <div id="verde" class="color verde right" data-color="verde"></div>
+          </div>
+          <p class="text levelSimon" id="levelSimon">Nivel: 0</p>
+          <button class="reset btn" id="resetSimon" onclick="resetSimon()">Reset</button>
+        </div>
+    </section>
+    <script src="../js/simon.js"></script>
+</body>
+</html>
