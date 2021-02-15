@@ -28,12 +28,15 @@ function onMove(evt) {
     m = oMousePos(canvas, evt);
     ctx.lineTo(m.x, m.y);
     ctx.stroke();
+
   }
 }
 
 function onEnd(evt) {
   dibujando = false;
 }
+
+
 
 function oMousePos(canvas, evt) {
   var ClientRect = canvas.getBoundingClientRect();
@@ -55,6 +58,7 @@ for (var i = 0; i < eventsRy.length; i++) {
             return;
         },false);
   })(i);
+  
 }
 
 clear.addEventListener(
